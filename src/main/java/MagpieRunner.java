@@ -20,10 +20,26 @@ public class MagpieRunner
     	
     	while (!statement.equals("Bye"))
     	{
-    		System.out.println (maggie.getResponse(statement));
-    		statement = in.nextLine();
+            if (statement.indexOf("cat") != -1){
+            System.out.println("Tell me more about your pets");
+            statement = in.nextLine();
         }
-        
+            if (statement.indexOf("dog") != -1 ){
+            System.out.println("Tell me more about your pets");
+            statement = in.nextLine();
+            }
+            if (statement.indexOf("Mr.") != -1|| statement.indexOf("Miss") != -1){
+                System.out.println("He sounds like a good teacher.");
+                statement = in.nextLine();
+            }
+            if (statement.trim().length() == 0) {
+                System.out.println("Please say something please")
+            }
+            else {
+                System.out.println (maggie.getResponse(statement));
+            statement = in.nextLine();
+        }
+        }
         in.close();
     }
 }
