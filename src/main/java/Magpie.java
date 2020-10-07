@@ -76,7 +76,12 @@ public class Magpie
         {
             response = "You don't say.";
         }
-    
+        else if (whichResponse == 4){
+            response = "It's funny";
+        }
+        else if (whichResponse == 5){
+            response = "I think I would love it";
+        }
         return response;
     }
 
@@ -89,9 +94,19 @@ public class Magpie
 
     // The method returns the index of the first character in word
     // if it is found, and returns -1 otherwise. 
-    public int findWord(String str, String word) {
-        return -1;
-    }
+    public int findWord(String sentence, String word) {
+        sentence = " " + sentence.toLowerCase() + " ";
+        int number = sentence.indexOf(word);
+        if (number == -1){
+            return -1;
+        }
+        else if ((int)sentence.charAt(number -1) != 32 || (int)sentence.charAt(number - 1) != 32){
+            return -1;
+        }
+        else {
+            return number - 1;
+        }
+}
 
     
     // We will work on the following methods later!
@@ -105,7 +120,7 @@ public class Magpie
     public String transformIWantStatement(String statement)
     {
         //your code here
-        return "";
+        return "Would you really be happy if you had " + statement.substring(8) + "?";
     }
 
     /**
@@ -117,7 +132,7 @@ public class Magpie
     public String transformIYouStatement(String statement)
     {
         //your code here
-        return "";
+        return "Why do you" + statement.substring(3, -4) + "me?";
     }
 
     /**
@@ -129,7 +144,7 @@ public class Magpie
     public String transformIWantToStatement(String statement)
     {
         // your code here
-        return "";
+        return "What would it mean to" + statement.substring(10);
     }
 
 
@@ -144,6 +159,6 @@ public class Magpie
     public String transformYouMeStatement(String statement)
     {
         // your code here
-        return "";
+        return "What makes you think that I " + statement.substring(5, -3) + " you?";
     }
 }
