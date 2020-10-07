@@ -120,7 +120,7 @@ public class Magpie
     public String transformIWantStatement(String statement)
     {
         //your code here
-        return "Would you really be happy if you had " + statement.substring(8) + "?";
+        return "Would you really be happy if you had " + statement.substring(7) + "?";
     }
 
     /**
@@ -132,7 +132,7 @@ public class Magpie
     public String transformIYouStatement(String statement)
     {
         //your code here
-        return "Why do you" + statement.substring(3, -4) + "me?";
+        return "Why do you" + statement.substring(1,7) + "me?";
     }
 
     /**
@@ -144,7 +144,7 @@ public class Magpie
     public String transformIWantToStatement(String statement)
     {
         // your code here
-        return "What would it mean to" + statement.substring(10);
+        return "What would it mean to" + statement.substring(9) + "?";
     }
 
 
@@ -159,6 +159,6 @@ public class Magpie
     public String transformYouMeStatement(String statement)
     {
         // your code here
-        return "What makes you think that I " + statement.substring(5, -3) + " you?";
+        return "What makes you think that I " + statement.substring(7,12) + "you?";
     }
 }
