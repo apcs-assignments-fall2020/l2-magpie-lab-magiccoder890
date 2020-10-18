@@ -33,7 +33,7 @@ public class MagpieRunner
                 statement = in.nextLine();
             }
             if (statement.trim().length() == 0) {
-                System.out.println("Please say something please")
+                System.out.println("Please say something please");
             }
             else {
                 System.out.println (maggie.getResponse(statement));
